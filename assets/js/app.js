@@ -3,19 +3,54 @@ function INNinfo(){
 
     let inputNumber = numberInput.value;
 
+    let sex = '';
+
+    let Birthday = new Date(1900, 0, 0);
+
+    let DateBirthdayInNumber = '';
+
+    if((inputNumber.length == 10)){
+        
     inputNumber = inputNumber.split('');
 
-    if((inputNumber.length == 10) && (inputNumber[9] == ((2 * inputNumber[  0] + 4 * inputNumber[1] + 10 * inputNumber[2] + 3 * inputNumber[3] + 5 * inputNumber[4] + 9 * inputNumber[5] + 4 * inputNumber[6] + 6 * inputNumber[7] + 8 * inputNumber[8]) % 11) % 10)){
+        if((inputNumber[8] == 8) || (inputNumber[8] == 1) || ((inputNumber[8] % 2) == 0)){
 
-        
+            sex = 'Мужчина';
 
-    }else if((inputNumber.length == 12) && ((inputNumber[10] == ((7 * inputNumber[ 0] + 2 * inputNumber[1] + 4 * inputNumber[2] + 10 * inputNumber[3] + 3 * inputNumber[4] + 5 * inputNumber[5] + 9 * inputNumber[6] + 4 * inputNumber[7] + 6 * inputNumber[8] + 8 * inputNumber[9]) % 11) % 10) && (inputNumber[11] == ((3 * inputNumber[ 0] + 7 * inputNumber[1] + 2 * inputNumber[2] + 4 * inputNumber[3] + 10 * inputNumber[4] + 3 * inputNumber[5] + 5 * inputNumber[6] + 9 * inputNumber[7] + 4 * inputNumber[8] + 6 * inputNumber[9] + 8 * inputNumber[10]) % 11) % 10))){
+            for (let i = 0; i < 5; i++) {
 
-        return true;
+                DateBirthdayInNumber = DateBirthdayInNumber + inputNumber[i];
+                
+            }
 
-    }else{
+            DateBirthdayInNumber = DateBirthdayInNumber / 1;
 
-        return false;
+            Birthday.setDate( Birthday.getDate() + DateBirthdayInNumber);
 
-    }
+            WhoAreYou.innerHTML = `Пол - ${sex}, д.р. ${Birthday.getDate()}.${Birthday.getMonth() + 1}.${Birthday.getFullYear()}`;
+
+            }
+
+        else{
+
+            sex = 'Женьщина';
+
+            for (let i = 0; i < 5; i++) {
+
+                DateBirthdayInNumber = DateBirthdayInNumber + inputNumber[i];
+                
+            }
+
+            DateBirthdayInNumber = DateBirthdayInNumber / 1;
+
+            Birthday.setDate( Birthday.getDate() + DateBirthdayInNumber);
+
+            WhoAreYou.innerHTML = `Пол - ${sex}, д.р. ${Birthday.getDate()}.${Birthday.getMonth() + 1}.${Birthday.getFullYear()}`;
+
+            }
+
+
+        }
+
+    
 } 
