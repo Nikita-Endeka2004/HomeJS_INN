@@ -31,15 +31,7 @@ function INNinfo(){
 
             Birthday.setDate( Birthday.getDate() + DateBirthdayInNumber);
 
-            //console.log(AgeUser);
-
             AgeUser = age.getFullYear() - Birthday.getFullYear();
-
-            console.log(Birthday.getFullYear(),typeof(Birthday.getFullYear()));
-
-            //console.log(age.getFullYear());
-
-            //console.log(AgeUser, typeof(AgeUser));
 
             WhoAreYou.innerHTML = `Пол - ${sex}, д.р. ${Birthday.getDate()}.${Birthday.getMonth() + 1}.${Birthday.getFullYear()}`;
 
@@ -61,9 +53,7 @@ function INNinfo(){
 
             Birthday.setDate( Birthday.getDate() + DateBirthdayInNumber);
 
-            AgeUser = age.getFullYear - Birthday.getFullYear;
-
-            console.log(age);
+            AgeUser = age.getFullYear() - Birthday.getFullYear();
 
             WhoAreYou.innerHTML = `Пол - ${sex}, д.р. ${Birthday.getDate()}.${Birthday.getMonth() + 1}.${Birthday.getFullYear()}`;
 
