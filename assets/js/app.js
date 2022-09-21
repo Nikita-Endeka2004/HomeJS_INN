@@ -9,6 +9,10 @@ function INNinfo(){
 
     let DateBirthdayInNumber = '';
 
+    let age = new Date();
+
+    let AgeUser = 0;
+
     if((inputNumber.length == 10)){
         
     inputNumber = inputNumber.split('');
@@ -27,7 +31,19 @@ function INNinfo(){
 
             Birthday.setDate( Birthday.getDate() + DateBirthdayInNumber);
 
+            //console.log(AgeUser);
+
+            AgeUser = age.getFullYear() - Birthday.getFullYear();
+
+            console.log(Birthday.getFullYear(),typeof(Birthday.getFullYear()));
+
+            //console.log(age.getFullYear());
+
+            //console.log(AgeUser, typeof(AgeUser));
+
             WhoAreYou.innerHTML = `Пол - ${sex}, д.р. ${Birthday.getDate()}.${Birthday.getMonth() + 1}.${Birthday.getFullYear()}`;
+
+            UserAge.innerHTML = `${AgeUser}`;
 
             }
 
@@ -45,7 +61,13 @@ function INNinfo(){
 
             Birthday.setDate( Birthday.getDate() + DateBirthdayInNumber);
 
+            AgeUser = age.getFullYear - Birthday.getFullYear;
+
+            console.log(age);
+
             WhoAreYou.innerHTML = `Пол - ${sex}, д.р. ${Birthday.getDate()}.${Birthday.getMonth() + 1}.${Birthday.getFullYear()}`;
+
+            UserAge.innerHTML = `${AgeUser}`;
 
             }
 
