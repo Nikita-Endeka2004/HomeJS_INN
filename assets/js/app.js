@@ -15,7 +15,7 @@ function INNinfo(){
 
         if((inputNumber[8] == 8) || (inputNumber[8] == 1) || ((inputNumber[8] % 2) == 0)){
 
-            sex = 'Мужчина';
+            sex = 'Женский';
 
             for (let i = 0; i < 5; i++) {
 
@@ -33,7 +33,7 @@ function INNinfo(){
 
         else{
 
-            sex = 'Женьщина';
+            sex = 'Мужской';
 
             for (let i = 0; i < 5; i++) {
 
