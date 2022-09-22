@@ -33,6 +33,25 @@ function INNinfo(){
 
             AgeUser = age.getFullYear() - Birthday.getFullYear();
 
+            if(Birthday.getDate() >= age.getDate()){
+
+                if(Birthday.getMonth() >= age.getMonth()){
+
+                    AgeUser = AgeUser - 1;
+
+                }
+
+            }
+            if(Birthday.getDate() <= age.getDate()){
+
+                if(Birthday.getMonth() <= age.getMonth()){
+
+                    AgeUser = AgeUser;
+
+                }
+
+            }
+
             WhoAreYou.innerHTML = `Пол - ${sex}, д.р. ${Birthday.getDate()}.${Birthday.getMonth() + 1}.${Birthday.getFullYear()}`;
 
             UserAge.innerHTML = `${AgeUser}`;
@@ -54,6 +73,25 @@ function INNinfo(){
             Birthday.setDate( Birthday.getDate() + DateBirthdayInNumber);
 
             AgeUser = age.getFullYear() - Birthday.getFullYear();
+
+            if(Birthday.getDate() >= age.getDate()){
+
+                if(Birthday.getMonth() >= age.getMonth()){
+
+                    AgeUser = AgeUser - 1;
+
+                }
+
+            }
+            if(Birthday.getDate() <= age.getDate()){
+
+                if(Birthday.getMonth() <= age.getMonth()){
+
+                    AgeUser = AgeUser;
+
+                }
+
+            }
 
             WhoAreYou.innerHTML = `Пол - ${sex}, д.р. ${Birthday.getDate()}.${Birthday.getMonth() + 1}.${Birthday.getFullYear()}`;
 
