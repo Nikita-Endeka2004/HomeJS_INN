@@ -33,20 +33,36 @@ function INNinfo(){
 
             AgeUser = age.getFullYear() - Birthday.getFullYear();
 
-            if(Birthday.getDate() >= age.getDate()){
+            if(Birthday.getMonth() <= age.getMonth()){
 
-                if(Birthday.getMonth() >= age.getMonth()){
+                if(Birthday.getDate() <= age.getDate()){
+
+                    console.log('sdfgsdfg');
+
+                    AgeUser = AgeUser;
+
+                }else{
+
+                    console.log('sdfgsdfg');
 
                     AgeUser = AgeUser - 1;
 
                 }
 
             }
-            if(Birthday.getDate() <= age.getDate()){
+            if(Birthday.getMonth() > age.getMonth()){
 
-                if(Birthday.getMonth() <= age.getMonth()){
+                if(Birthday.getDate() > age.getDate()){
 
-                    AgeUser = AgeUser;
+                    console.log('12341234');
+
+                    AgeUser = AgeUser - 1;
+
+                }else{
+
+                    AgeUser = AgeUser - 1;
+
+                    console.log('12341234');
 
                 }
 
@@ -74,18 +90,18 @@ function INNinfo(){
 
             AgeUser = age.getFullYear() - Birthday.getFullYear();
 
-            if(Birthday.getDate() >= age.getDate()){
+            if(Birthday.getMonth() >= age.getMonth()){
 
-                if(Birthday.getMonth() >= age.getMonth()){
+                if(Birthday.getDate() >= age.getDate()){
 
                     AgeUser = AgeUser - 1;
 
                 }
 
             }
-            if(Birthday.getDate() <= age.getDate()){
+            if(Birthday.getMonth() < age.getMonth()){
 
-                if(Birthday.getMonth() <= age.getMonth()){
+                if(Birthday.getDate() < age.getDate()){
 
                     AgeUser = AgeUser;
 
